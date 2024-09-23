@@ -1,17 +1,19 @@
 resource "azurerm_resource_group" "mcit420zz5um" {
   name     = var.azurermresourcegroup
-  location = "canadacentral"
+  location = var.location1
 }
 
 resource "azurerm_resource_group" "loadbalancer" {
   name     = var.loadbalancer
-  location = "eastus"
+  location = var.location2
 }
 resource "azurerm_resource_group" "OSPF" {
   name     = var.OSPF
-  location = "eastus"
+  location = var.location3
 }
 resource "azurerm_resource_group" "network" {
   name     = var.network
-  location = "eastus"
+  location = var.location2
 }
+
+
