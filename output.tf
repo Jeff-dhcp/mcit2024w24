@@ -1,4 +1,4 @@
 output "nameofthevariable" {
 description="variable"
-value="var.cloud"
+value=var.cloud
 }
