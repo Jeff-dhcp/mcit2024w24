@@ -54,3 +54,8 @@ variable "location3" {
 type=string
 default="francesouth"
 }
+
+variable "cloud" {
+type=string
+default="database"
+}
