@@ -40,3 +40,17 @@ variable "microsoft" {
 type=string
 default="microsoft"
 }
+
+variable "location1" {
+type=string
+default="koreasouth"
+}
+
+variable "location2" {
+type=string
+default="ukwest"
+}
+variable "location3" {
+type=string
+default="francesouth"
+}
