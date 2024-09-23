@@ -13,5 +13,6 @@ variable "tenant_id"{
 }
 variable "azurermresourcegroup"{ 
 type=string
+default="myresourcegroup"
 
 }
