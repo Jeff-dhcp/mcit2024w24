@@ -5,15 +5,15 @@ value=var.cloud
 
 output "nameofthelocation" {
 description="variable"
-value=var.southkorea
+value=var.location1
 }
 
 output "nameofthelocation2" {
 description="variable"
-value=var.ukwest
+value=var.location2
 }
 
 output"nameofthelocation3" {
 description="variable"
-value=var.uscentral
+value=var.location3
 }
