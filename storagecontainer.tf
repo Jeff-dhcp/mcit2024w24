@@ -15,9 +15,9 @@ resource "azurerm_storage_account" "storageresourcegroup" {
   }
 }
 
-resource "azurerm_storage_container" "" {
-  name                  = "vhds"
-  storage_account_name  = azurerm_storage_account.example.name
+resource "azurerm_storage_container" "storagecontainer3" {
+  name                  = var.storagecontainer3
+  storage_account_name  = var.vhds
   container_access_type = "private"
 }
 
