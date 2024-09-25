@@ -79,3 +79,8 @@ variable "accounttier" {
 type=string
 default= "standard"
 }
+
+variable "accountreplication" {
+type=string
+default= "lrs"
+}
