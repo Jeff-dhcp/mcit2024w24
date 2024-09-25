@@ -5,7 +5,7 @@ resource "azurerm_resource_group" "storagecontainer" {
 
 resource "azurerm_storage_account" "storageresourcegroup" {
   name                     = var.storagecontainer2
-  resource_group_name      = azurerm_resource_group.storagecontainer.azurecontainer
+  resource_group_name      = azurerm_resource_group.storagecontainer.name
   location                 = azurerm_resource_group.storagecontainer.location
   account_tier             = var.accounttier
   account_replication_type = var.accountreplicationtype
