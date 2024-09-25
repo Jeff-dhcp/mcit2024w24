@@ -89,3 +89,5 @@ variable "storagecontainer3" {
 type=string
 default=vhds
 }
+
+variable "
