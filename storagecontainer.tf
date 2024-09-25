@@ -8,7 +8,7 @@ resource "azurerm_storage_account" "storageresourcegroup" {
   resource_group_name      = azurerm_resource_group.storagecontainer.azurecontainer
   location                 = azurerm_resource_group.storagecontainer.location
   account_tier             = var.accounttier
-  account_replication_type = "LRS"
+  account_replication_type = var.accountreplicationtype
 
   tags = {
     environment = "staging"
