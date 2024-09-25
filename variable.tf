@@ -84,3 +84,7 @@ variable "accountreplicationtype" {
 type=string
 default= "LRS"
 }
+
+variable "storagecontainer3"
+type=string
+default=
