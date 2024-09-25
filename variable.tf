@@ -85,6 +85,7 @@ type=string
 default= "LRS"
 }
 
-variable "storagecontainer3"
+variable "storagecontainer3" {
 type=string
-default=
+default=vhds
+}
