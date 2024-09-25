@@ -80,7 +80,7 @@ type=string
 default= "standard"
 }
 
-variable "accountreplication" {
+variable "accountreplicationtype" {
 type=string
-default= "lrs"
+default= "LRS"
 }
