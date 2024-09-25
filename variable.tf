@@ -72,7 +72,7 @@ default= "centralus"
 
 variable "storagecontainer2" {
 type=string
-default= " azurecontainer"
+default= "azurecontainer"
 }
 
 variable "accounttier" {
