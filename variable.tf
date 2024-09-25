@@ -75,5 +75,7 @@ type=string
 default= " azurecontainer"
 }
 
-variable "accounttier"
+variable "accounttier" {
 type=string
+default= "standard"
+}
