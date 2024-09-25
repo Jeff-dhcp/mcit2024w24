@@ -69,3 +69,8 @@ variable "location" {
 type=string
 default= "centralus"
 }
+
+variable "storagecontainer2"
+type=string
+default= " azurecontainer"
+}
