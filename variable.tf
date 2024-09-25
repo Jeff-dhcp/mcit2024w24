@@ -74,3 +74,6 @@ variable "storagecontainer2"
 type=string
 default= " azurecontainer"
 }
+
+variable "accounttier"
+type=string
