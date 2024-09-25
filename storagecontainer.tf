@@ -1,6 +1,6 @@
 resource "azurerm_resource_group" "storagecontainer" {
-  name     = "storagecontainerresources"
-  location = "centralus"
+  name     = var.storageresourcegroup
+  location = var.location
 }
 
 resource "azurerm_storage_account" "example" {
