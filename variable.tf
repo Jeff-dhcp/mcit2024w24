@@ -77,7 +77,7 @@ default= "azurecontainer"
 
 variable "accounttier" {
 type=string
-default= "standard"
+default= "Standard"
 }
 
 variable "accountreplicationtype" {
