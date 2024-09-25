@@ -3,10 +3,10 @@ resource "azurerm_resource_group" "storagecontainer" {
   location = var.location
 }
 
-resource "azurerm_storage_account" "example" {
+resource "azurerm_storage_account" "storageresourcegroup" {
   name                     = "storagecontainer"
-  resource_group_name      = azurerm_resource_group.example.name
-  location                 = azurerm_resource_group.example.location
+  resource_group_name      = azurerm_resource_group.storageresourcegroup.name
+  location                 = azurerm_resource_group.centralus.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
 
