@@ -90,7 +90,7 @@ type=string
 default=vhds
 }
 
-variable "private" {
+variable "containeraccestype" {
 type=string
-default=
+default= "private"
 }
