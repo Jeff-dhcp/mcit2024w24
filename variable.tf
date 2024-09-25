@@ -70,7 +70,7 @@ type=string
 default= "centralus"
 }
 
-variable "storagecontainer2"
+variable "storagecontainer2" {
 type=string
 default= " azurecontainer"
 }
