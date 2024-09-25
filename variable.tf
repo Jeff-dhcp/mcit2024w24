@@ -87,7 +87,7 @@ default= "LRS"
 
 variable "storagecontainer3" {
 type=string
-default=vhds
+default="vhds"
 }
 
 variable "containeraccestype" {
