@@ -7,7 +7,7 @@ resource "azurerm_storage_account" "storageresourcegroup" {
   name                     = var.storagecontainer2
   resource_group_name      = azurerm_resource_group.storagecontainer.azurecontainer
   location                 = azurerm_resource_group.storagecontainer.location
-  account_tier             = "Standard"
+  account_tier             = var.accounttier
   account_replication_type = "LRS"
 
   tags = {
