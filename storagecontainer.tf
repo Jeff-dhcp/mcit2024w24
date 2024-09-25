@@ -17,7 +17,7 @@ resource "azurerm_storage_account" "storageresourcegroup" {
 
 resource "azurerm_storage_container" "storagecontainer3" {
   name                  = var.storagecontainer3
-  storage_account_name  = azurerm_storage_account.storageresourcegroup
+  storage_account_name  = azurerm_storage_account.storageresourcegroup.name
   container_access_type = "private"
 }
 
