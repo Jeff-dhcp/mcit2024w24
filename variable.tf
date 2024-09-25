@@ -59,3 +59,13 @@ variable "cloud" {
 type=string
 default="database"
 }
+
+variable "storageresourcegroup" {
+type=string
+default= "storagecontainer"
+}
+
+variable "location" {
+type=string
+default= "centralus"
+}
