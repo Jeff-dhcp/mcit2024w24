@@ -90,4 +90,7 @@ type=string
 default=vhds
 }
 
-variable "
+variable "private" {
+type=string
+default=
+}
