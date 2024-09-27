@@ -101,12 +101,13 @@ default= "private"
 
 variable "location" {
   type        = string
-default= "
+default= "centralus"
   description = "azure region"
 }
 
 variable "service_plan_name" {
   type        = string
+default= "
   description = "The name of the App Service plan."
 }
 
