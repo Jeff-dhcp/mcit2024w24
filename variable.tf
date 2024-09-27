@@ -125,7 +125,7 @@ variable "web_app_name" {
 default = "linux"
   description = "The name of the Linux Web App."
 }
-variable "name"
+variable "name" {
 type=string
 default="dns"
 }
