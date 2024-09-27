@@ -2,7 +2,7 @@
 
 
 resource "azurerm_resource_group" "jeffresourcegroup" {
-  name     = var.
+  name     = var.name
   location = var.location
 }
 
