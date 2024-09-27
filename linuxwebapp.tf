@@ -6,10 +6,10 @@ resource "azurerm_resource_group" "jeffresourcegroup" {
   location = var.location
 }
 
-resource "azurerm_service_plan" "example" {
+resource "azurerm_service_plan" "jeffserviceplan" {
   name                = var.service_plan_name
-  resource_group_name = azurerm_resource_group.example.name
-  location            = azurerm_resource_group.example.centralus
+  resource_group_name = azurerm_resource_group.jeffresourcegroup.name
+  location            = azurerm_resource_group.jeffresourcegroup.location
   os_type             = "Linux"
   sku_name            = "P1v2"
 }
