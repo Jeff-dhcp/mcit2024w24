@@ -14,7 +14,7 @@ resource "azurerm_service_plan" "jeffserviceplan" {
   sku_name            = var.p1v2
 }
 
-resource "azurerm_linux_web_app" "" {
+resource "azurerm_linux_web_app" "p1v2" {
   name                = "var.p1v2"
   resource_group_name = azurerm_resource_group.jeffsresourcegroup.name
   location            = azurerm_service_plan.jeffresourcegroup.location
