@@ -94,6 +94,13 @@ variable "containeraccestype" {
 type=string
 default= "private"
 }
+
+
+
+}
+
+variable "location" {
+  type        = string
   description = "The Azure region to deploy the resources."
 }
 
@@ -117,4 +124,4 @@ variable "sku_name" {
 variable "web_app_name" {
   type        = string
   description = "The name of the Linux Web App."
-}
+
