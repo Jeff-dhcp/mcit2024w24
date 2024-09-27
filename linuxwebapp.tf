@@ -3,7 +3,7 @@
 
 resource "azurerm_resource_group" "example" {
   name     = "example-resources"
-  location = "West Europe"
+  location = "centralus"
 }
 
 resource "azurerm_service_plan" "example" {
