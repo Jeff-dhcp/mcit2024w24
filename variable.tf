@@ -107,7 +107,7 @@ default= "centralus"
 
 variable "service_plan_name" {
   type        = string
-default= "
+default= "serviceplanid"
   description = "The name of the App Service plan."
 }
 
