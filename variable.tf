@@ -97,10 +97,11 @@ default= "private"
 
 
 
-}
+
 
 variable "location" {
   type        = string
+default= "
   description = "azure region"
 }
 
