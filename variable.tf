@@ -126,5 +126,5 @@ variable "web_app_name" {
 {
 variable "name"
 type=string
-default= "dns"
+default="dns"
 }
