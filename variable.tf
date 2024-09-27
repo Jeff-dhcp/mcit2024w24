@@ -94,3 +94,27 @@ variable "containeraccestype" {
 type=string
 default= "private"
 }
+  description = "The Azure region to deploy the resources."
+}
+
+variable "service_plan_name" {
+  type        = string
+  description = "The name of the App Service plan."
+}
+
+variable "os_type" {
+  type        = string
+  default     = "Linux"
+  description = "The OS type for the App Service Plan."
+}
+
+variable "sku_name" {
+  type        = string
+  default     = "P1v2"
+  description = "The SKU name for the App Service Plan."
+}
+
+variable "web_app_name" {
+  type        = string
+  description = "The name of the Linux Web App."
+}
