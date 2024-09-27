@@ -99,11 +99,8 @@ default= "private"
 
 
 
-variable "location" {
-  type        = string
-default= "centralus"
-  description = "azure region"
-}
+
+
 
 variable "service_plan_name" {
   type        = string
