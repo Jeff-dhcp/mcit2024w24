@@ -122,8 +122,9 @@ variable "sku_name" {
 
 variable "web_app_name" {
   type        = string
+default = "linux"
   description = "The name of the Linux Web App."
-{
+}
 variable "name"
 type=string
 default="dns"
