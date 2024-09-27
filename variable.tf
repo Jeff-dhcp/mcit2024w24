@@ -101,7 +101,7 @@ default= "private"
 
 variable "location" {
   type        = string
-  description = "The Azure region to deploy the resources."
+  description = "azure region"
 }
 
 variable "service_plan_name" {
