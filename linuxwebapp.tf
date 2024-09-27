@@ -2,8 +2,8 @@
 
 
 resource "azurerm_resource_group" "jeffresourcegroup" {
-  name     = "example-resources"
-  location = "centralus"
+  name     = var.
+  location = var.location
 }
 
 resource "azurerm_service_plan" "example" {
