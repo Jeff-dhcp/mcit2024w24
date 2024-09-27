@@ -7,7 +7,7 @@ resource "azurerm_resource_group" "jeffresourcegroup" {
 }
 
 resource "azurerm_service_plan" "example" {
-  name                = "example"
+  name                = var.service_plan_name
   resource_group_name = azurerm_resource_group.example.name
   location            = azurerm_resource_group.example.centralus
   os_type             = "Linux"
