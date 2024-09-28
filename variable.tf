@@ -114,7 +114,7 @@ variable "os_type" {
   description = "The OS type for the App Service Plan."
 }
 
-variable "sku_name" {
+variable "p1v2" {
   type        = string
   default     = "P1v2"
   description = "The SKU name for the App Service Plan."
