@@ -15,7 +15,7 @@ resource "azurerm_service_plan" "jeffserviceplan" {
 }
 
 resource "azurerm_linux_web_app" "p1v2" {
-  name                = "var.p1v2"
+  name                = var.p1v2
   resource_group_name = azurerm_resource_group.jeffsresourcegroup.name
   location            = azurerm_resource_group.jeffresourcegroup.location
   service_plan_id     = azurerm_service_plan.jeffserviceplan.id
