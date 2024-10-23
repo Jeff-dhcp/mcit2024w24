@@ -30,4 +30,9 @@ variable "vm_size" {
 }
 
 
+variable "foods" {
+  description = "List of foods"
+  type        = list(string)
+  default     = ["steak", "pizza", "poutine", "salmon", "chicken"]
+}
 
