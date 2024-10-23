@@ -77,3 +77,14 @@ resource "null_resource" "food_items" {
   }
 }
 
+
+
+
+
+resource "null_resource" "car_brands" {
+  for_each = toset(var.cars)
+
+  provisioner "local-exec" {
+    command = "echo 'This is a ${each.key} car'"
+  }
+}
