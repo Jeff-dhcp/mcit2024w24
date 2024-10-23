@@ -73,7 +73,7 @@ default= "centralus"
 
 
 
-# variables.tf
+
 variable "location" {
   description = "The location for the resources."
   default     = "East US"
