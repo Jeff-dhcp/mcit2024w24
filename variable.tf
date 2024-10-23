@@ -70,29 +70,56 @@ type=string
 default= "centralus"
 }
 
-variable "storagecontainer2" {
-type=string
-default= "azurecontainer"
+
+
+
+# variables.tf
+variable "location" {
+  description = "The location for the resources."
+  default     = "East US"
 }
 
-variable "accounttier" {
-type=string
-default= "Standard"
+variable "resource_group_name" {
+  description = "Name of the resource group"
+  default     = "mcit-exam-rg"
 }
 
-variable "accountreplicationtype" {
-type=string
-default= "LRS"
+variable "vm_names" {
+  description = "List of virtual machine names"
+  default     = ["mcitexamvm1", "mcitexamvm2", "mcitexamvm3", "mcitexamvm4", "mcitexamvm5"]
 }
 
-variable "storagecontainer3" {
-type=string
-default="vhds"
+variable "admin_username" {
+  description = "The admin username for the virtual machine"
+  default     = "adminuser"
 }
 
-variable "containeraccestype" {
-type=string
-default= "private"
+variable "admin_password" {
+  description = "The admin password for the virtual machine"
+  default     = "Password1234!"
+}
+
+variable "vm_size" {
+  description = "The size of the virtual machine"
+  default     = "Standard_DS1_v2"
+}
+
+
+variable "foods" {
+  description = "List of foods"
+  type        = list(string)
+  default     = ["steak", "pizza", "poutine", "salmon", "chicken"]
+}
+
+
+
+
+
+
+variable "cars" {
+  description = "List of car brands"
+  type        = list(string)
+  default     = ["lambo", "mclaren", "bughati", "hellcat", "gtr"]
 }
 
 
@@ -102,30 +129,4 @@ default= "private"
 
 
 
-variable "service_plan_name" {
-  type        = string
-default= "serviceplanid"
-  description = "The name of the App Service plan."
-}
 
-variable "os_type" {
-  type        = string
-  default     = "Linux"
-  description = "The OS type for the App Service Plan."
-}
-
-variable "p1v2" {
-  type        = string
-  default     = "P1v2"
-  description = "The SKU name for the App Service Plan."
-}
-
-variable "web_app_name" {
-  type        = string
-default = "linux"
-  description = "The name of the Linux Web App."
-}
-variable "name" {
-type=string
-default="dns"
-}
