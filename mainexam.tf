@@ -68,3 +68,12 @@ resource "azurerm_virtual_machine" "example" {
   }
 }
 
+
+resource "null_resource" "food_items" {
+  for_each = toset(var.foods)
+
+  provisioner "local-exec" {
+    command = "echo 'Preparing ${each.key}'"
+  }
+}
+
