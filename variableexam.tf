@@ -36,3 +36,15 @@ variable "foods" {
   default     = ["steak", "pizza", "poutine", "salmon", "chicken"]
 }
 
+
+
+
+
+
+variable "cars" {
+  description = "List of car brands"
+  type        = list(string)
+  default     = ["lambo", "mclaren", "bughati", "hellcat", "gtr"]
+}
+
+
