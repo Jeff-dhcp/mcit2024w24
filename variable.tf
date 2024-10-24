@@ -74,10 +74,7 @@ default= "centralus"
 
 
 
-variable "location" {
-  description = "The location for the resources."
-  default     = "East US"
-}
+
 
 variable "resource_group_name" {
   description = "Name of the resource group"
