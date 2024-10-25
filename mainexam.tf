@@ -33,7 +33,7 @@ resource "azurerm_virtual_machine" "example" {
   for_each               = toset(var.vm_names)
   name                   = each.key
   location               = var.location
-  resource_group_name    = azurerm_resource_group.example.name
+  resource_group_name = azurerm_resource_group.mcit420zz5um.name
   network_interface_ids  = [azurerm_network_interface.example[each.key].id]
   vm_size                = var.vm_size
 
