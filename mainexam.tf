@@ -4,6 +4,8 @@
 
 resource "azurerm_virtual_network" "example" {
   name                = "mcitexam-vnet"
+resource_group_name  = azurerm_resource_group.mcit420zz5um.name
+location            = azurerm_resource_group.mcit420zz5um.location
   address_space       = ["10.0.0.0/16"]
 }
 
@@ -17,7 +19,7 @@ resource "azurerm_subnet" "example" {
 resource "azurerm_network_interface" "example" {
   for_each            = toset(var.vm_names)
   name                = "${each.key}-nic"
-  location            = var.azurerm_resource_group.mcit420zz5um.location
+  location            = azurerm_resource_group.mcit420zz5um.location
   resource_group_name = azurerm_resource_group.mcit420zz5um.name
 
   ip_configuration {
