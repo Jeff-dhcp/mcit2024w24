@@ -17,8 +17,8 @@ resource "azurerm_subnet" "example" {
 resource "azurerm_network_interface" "example" {
   for_each            = toset(var.vm_names)
   name                = "${each.key}-nic"
-  location            = var.location
-  resource_group_name = azurerm_resource_group.example.name
+  location            = var.azurerm_resource_group.mcit420zz5um.location
+  resource_group_name = azurerm_resource_group.mcit420zz5um.name
 
   ip_configuration {
     name                          = "internal"
