@@ -1,0 +1,76 @@
+from flask import Flask, request, jsonify, render_template
+
+app = Flask(__name__)
+
+class BankAccount:
+    def __init__(self, account_holder, initial_balance=0):
+        self.account_holder = account_holder
+        self.balance = initial_balance
+
+    def deposit(self, amount):
+        if amount <= 0:
+            return "Invalid deposit amount. Must be greater than zero."
+        self.balance += amount
+        return f"Deposited {amount}. New balance is {self.balance}."
+
+    def withdraw(self, amount):
+        if amount <= 0:
+            return "Invalid withdrawal amount. Must be greater than zero."
+        if amount > self.balance:
+            return "Insufficient balance."
+        self.balance -= amount
+        return f"Withdrew {amount}. New balance is {self.balance}."
+
+    def check_balance(self):
+        return f"Current balance: {self.balance}"
+
+# Simulated database for simplicity
+accounts = {}
+
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+@app.route('/create_account', methods=['POST'])
+def create_account():
+    data = request.form
+    account_holder = data['account_holder']
+    initial_balance = float(data.get('initial_balance', 0))
+    if account_holder in accounts:
+        return jsonify({'message': "Account already exists!"}), 400
+    accounts[account_holder] = BankAccount(account_holder, initial_balance)
+    return jsonify({'message': f"Account created for {account_holder}."}), 201
+
+@app.route('/deposit', methods=['POST'])
+def deposit():
+    data = request.form
+    account_holder = data['account_holder']
+    amount = float(data['amount'])
+    account = accounts.get(account_holder)
+    if not account:
+        return jsonify({'message': "Account not found."}), 404
+    response = account.deposit(amount)
+    return jsonify({'message': response})
+
+@app.route('/withdraw', methods=['POST'])
+def withdraw():
+    data = request.form
+    account_holder = data['account_holder']
+    amount = float(data['amount'])
+    account = accounts.get(account_holder)
+    if not account:
+        return jsonify({'message': "Account not found."}), 404
+    response = account.withdraw(amount)
+    return jsonify({'message': response})
+
+@app.route('/check_balance', methods=['GET'])
+def check_balance():
+    account_holder = request.args.get('account_holder')
+    account = accounts.get(account_holder)
+    if not account:
+        return jsonify({'message': "Account not found."}), 404
+    response = account.check_balance()
+    return jsonify({'balance': response})
+
+if __name__ == "__main__":
+    app.run(debug=True)
